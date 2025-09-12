@@ -7,7 +7,7 @@ const Menubar = () => {
   return (
     <div className="relative w-full">
       <nav
-        className="w-full md:-bottom-20 gap-x-2 left-0 flex overflow-x-scroll scrollbar-hide"
+        className="w-full md:-bottom-20 gap-x-2 flex overflow-x-scroll scrollbar-hide"
         aria-label="Category shortcuts"
         role="navigation"
         style={{
@@ -18,22 +18,21 @@ const Menubar = () => {
         {MENU_BAR.map((item, key) => (
           <div
             key={key}
-            className="flex min-w-[80px]  flex-col items-center gap-3"
+            className="flex transition-all hover:scale-95  active:scale-95 cursor-pointer min-w-[80px]  flex-col items-center gap-3"
           >
             <button
               // onClick={() => handleMenuClick(item)}
               className={`
-                ${item.bgGradient} 
                 w-16 h-16 rounded-2xl
-                flex items-center justify-center
-                transition-all duration-200
-                hover:scale-105 hover:shadow-md
-                active:scale-95
+                flex items-center cursor-pointer justify-center
+                 duration-200 border bg-neutral-100 border-neutral-200
+                 
+               
               `}
             >
               <Icon icon={item.icon} className="w-8 h-8 text-white" />
             </button>
-            <span className="text-sm  font-medium text-gray-700 text-center leading-tight">
+            <span className="text-sm  font-medium text-gray-500 text-center leading-tight">
               {item.label}
             </span>
           </div>
