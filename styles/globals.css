@@ -1,3 +1,23 @@
 @import "tailwindcss";
 
-@config "../tailwind.config.js"
+@config "../tailwind.config.js";
+
+/* Ensure Swiper surfaces remain transparent */
+.swiper,
+.swiper-slide {
+  background: transparent !important;
+}
+
+/* Remove any inner paddings added by skins */
+.swiper {
+  padding: 0 !important;
+}
+.swiper-slide {
+  padding: 0 !important;
+}
+
+/* Hide navigation arrows entirely */
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+}
