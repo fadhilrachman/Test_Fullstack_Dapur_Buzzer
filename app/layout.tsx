@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
+import { fontGeist, fontMono, fontSans } from "@/config/fonts";
 
 export const metadata: Metadata = {
   title: {
@@ -36,7 +36,7 @@ export default function RootLayout({
       <body
         className={clsx(
           "min-h-screen text-foreground  font-sans antialiased bg-[#F7F7F7]",
-          fontSans.className
+          fontGeist.className
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
