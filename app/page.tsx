@@ -9,10 +9,12 @@ import Clients from "@/components/clients";
 import CustomerFeedbackList from "@/components/customer-feedback";
 import BottomBar from "@/components/bottom-bar";
 import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 
 export default function Home() {
   return (
     <section className="max-w-[440px] pb-12  relative shadow  mx-auto min-h-screen bg-white  ">
+      <Navbar />
       <Banner />
       <div className="p-4 space-y-8">
         <Menubar />
