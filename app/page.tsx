@@ -8,6 +8,7 @@ import ListOtherInfluencer from "@/components/list-other-influencer";
 import Clients from "@/components/clients";
 import CustomerFeedbackList from "@/components/customer-feedback";
 import BottomBar from "@/components/bottom-bar";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       </div>{" "}
       <Clients />
       <CustomerFeedbackList />
+      <Footer />
       <BottomBar />
       <div className="relative bg-gradient-to-b from-primary-700 via-primary-400 to-transparent"></div>
     </section>

@@ -5,69 +5,12 @@ import { Card, CardBody } from "@heroui/card";
 import { Avatar } from "@heroui/avatar";
 import Title from "./title";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-
-type FeedbackItem = {
-  id: number;
-  name: string;
-  role: string;
-  company: string;
-  content: string;
-  rating: number;
-  date: string;
-  avatarId: string;
-};
+import { DATA_FEEDBACK } from "@/constants/data";
 
 const CustomerFeedbackList = () => {
-  const feedbackData: FeedbackItem[] = [
-    {
-      id: 1,
-      name: "Budi Santoso",
-      role: "Marketing Manager",
-      company: "PT Maju Bersama",
-      content:
-        "Dapur Buzzer membantu kami menemukan influencer yang tepat untuk kampanye produk baru kami. Hasilnya sangat memuaskan dengan peningkatan engagement sebesar 45%!",
-      rating: 5,
-      date: "15 Juni 2023",
-      avatarId: "1001",
-    },
-    {
-      id: 2,
-      name: "Siti Rahayu",
-      role: "Brand Director",
-      company: "Indofood",
-      content:
-        "Platform yang sangat intuitif dan mudah digunakan. Tim support juga sangat responsif dan membantu kami dalam setiap tahap kampanye.",
-      rating: 4,
-      date: "23 Juli 2023",
-      avatarId: "1002",
-    },
-    {
-      id: 3,
-      name: "Arief Wijaya",
-      role: "Digital Marketing Lead",
-      company: "Tokopedia",
-      content:
-        "Dapur Buzzer memberikan akses ke jaringan KOL yang luas dan beragam. Kami dapat dengan mudah menemukan influencer yang sesuai dengan target pasar kami.",
-      rating: 5,
-      date: "10 Agustus 2023",
-      avatarId: "1003",
-    },
-    {
-      id: 4,
-      name: "Dewi Lestari",
-      role: "Social Media Specialist",
-      company: "Unilever Indonesia",
-      content:
-        "Analitik yang disediakan sangat detail dan membantu kami mengukur ROI dengan tepat. Sangat direkomendasikan untuk brand yang ingin mengoptimalkan kampanye influencer marketing.",
-      rating: 5,
-      date: "5 September 2023",
-      avatarId: "1004",
-    },
-  ];
-
   const renderStars = (rating: number) => {
     return Array(5)
       .fill(0)
@@ -87,33 +30,39 @@ const CustomerFeedbackList = () => {
         slidesPerView={1}
         spaceBetween={16}
         pagination={{ clickable: true }}
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]}
         className="customer-feedback"
+        speed={400}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
       >
-        {feedbackData.map((feedback) => (
-          <SwiperSlide key={feedback.id} className="!pb-2">
+        {DATA_FEEDBACK.map((val, key) => (
+          <SwiperSlide key={key} className="!pb-2">
             <Card className="cursor-pointer shadow mx-3 transition-all duration-300 h-[200px]">
               <CardBody className="p-4">
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center gap-3">
                     <Avatar
-                      src={`https://img.heroui.chat/image/avatar?w=48&h=48&u=${feedback.avatarId}`}
+                      src={`https://img.heroui.chat/image/avatar?w=48&h=48&u=${val.avatarId}`}
                       className="w-10 h-10 text-small"
-                      name={feedback.name}
+                      name={val.name}
                     />
                     <div>
                       <h3 className="font-semibold text-gray-800 text-sm">
-                        {feedback.name}
+                        {val.name}
                       </h3>
                       <p className="text-xs text-gray-500">
-                        {feedback.role}, {feedback.company}
+                        {val.role}, {val.company}
                       </p>
                     </div>
                   </div>
                   <div className="flex justify-between items-center">
-                    <div className="flex">{renderStars(feedback.rating)}</div>
+                    <div className="flex">{renderStars(val.rating)}</div>
                   </div>
-                  <p className="text-sm text-gray-600">{feedback.content}</p>
+                  <p className="text-sm text-gray-600">{val.content}</p>
                 </div>
               </CardBody>
             </Card>

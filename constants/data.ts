@@ -4,6 +4,52 @@ export const DATA_BANNER = [
   "/banner4.png",
   "/banner5.png",
 ];
+export const DATA_FEEDBACK = [
+  {
+    id: 1,
+    name: "Budi Santoso",
+    role: "Marketing Manager",
+    company: "PT Maju Bersama",
+    content:
+      "Dapur Buzzer membantu kami menemukan influencer yang tepat untuk kampanye produk baru kami. Hasilnya sangat memuaskan dengan peningkatan engagement sebesar 45%!",
+    rating: 5,
+    date: "15 Juni 2023",
+    avatarId: "1001",
+  },
+  {
+    id: 2,
+    name: "Siti Rahayu",
+    role: "Brand Director",
+    company: "Indofood",
+    content:
+      "Platform yang sangat intuitif dan mudah digunakan. Tim support juga sangat responsif dan membantu kami dalam setiap tahap kampanye.",
+    rating: 4,
+    date: "23 Juli 2023",
+    avatarId: "1002",
+  },
+  {
+    id: 3,
+    name: "Arief Wijaya",
+    role: "Digital Marketing Lead",
+    company: "Tokopedia",
+    content:
+      "Dapur Buzzer memberikan akses ke jaringan KOL yang luas dan beragam. Kami dapat dengan mudah menemukan influencer yang sesuai dengan target pasar kami.",
+    rating: 5,
+    date: "10 Agustus 2023",
+    avatarId: "1003",
+  },
+  {
+    id: 4,
+    name: "Dewi Lestari",
+    role: "Social Media Specialist",
+    company: "Unilever Indonesia",
+    content:
+      "Analitik yang disediakan sangat detail dan membantu kami mengukur ROI dengan tepat. Sangat direkomendasikan untuk brand yang ingin mengoptimalkan kampanye influencer marketing.",
+    rating: 5,
+    date: "5 September 2023",
+    avatarId: "1004",
+  },
+];
 export const DATA_RECOMMENDED_INFLUENCER = [
   {
     name: "Nurul Hasanah Hidayat",

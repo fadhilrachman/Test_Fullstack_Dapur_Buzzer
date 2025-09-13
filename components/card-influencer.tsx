@@ -34,7 +34,7 @@ const CardInfluencer = (props: Props) => {
       />
       <div className=" p-[12px]  sm:p-4 bg-gradient-to-t from-white via-white/30 to-transparent">
         <div className="flex items-center justify-start gap-2">
-          <h3 className="text-sm flex-1 min-w-0 truncate border  font-semibold  text-black">
+          <h3 className="text-sm  truncate   font-semibold  text-black">
             {props.name}
           </h3>
           <Icon

@@ -2,7 +2,7 @@
 import { DATA_BANNER } from "@/constants/data";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards } from "swiper/modules";
+import { Autoplay, EffectCards } from "swiper/modules";
 import "swiper/css";
 import { Pagination, Navigation } from "swiper/modules";
 const Banner = () => {
@@ -15,8 +15,14 @@ const Banner = () => {
         pagination={{
           clickable: true,
         }}
+        speed={400}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
         navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Pagination, Navigation, Autoplay]}
         className="banner bg-transparent"
         onSlideChange={(val) => {
           console.log({ val });
