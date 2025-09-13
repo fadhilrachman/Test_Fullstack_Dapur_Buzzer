@@ -24,14 +24,11 @@ const Banner = () => {
         navigation={true}
         modules={[Pagination, Navigation, Autoplay]}
         className="banner bg-transparent"
-        onSlideChange={(val) => {
-          console.log({ val });
-        }}
       >
         {DATA_BANNER.map((val, key) => {
           return (
             <SwiperSlide key={key} className="!bg-transparent ">
-              <div className="rounded-b-[48px] scale-x-[1.02] overflow-hidden">
+              <div className="rounded-b-[32px] scale-x-[1.02] overflow-hidden">
                 <img
                   src={val}
                   alt=""

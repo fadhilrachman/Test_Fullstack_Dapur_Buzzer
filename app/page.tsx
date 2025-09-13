@@ -13,17 +13,13 @@ import Navbar from "@/components/navbar";
 
 export default function Home() {
   return (
-    <section className="max-w-[440px] pb-12  relative shadow  mx-auto min-h-screen bg-white  ">
+    <section className="max-w-[440px] pb-12  relative shadow  mx-auto min-h-screen  bg-white  ">
       <Navbar />
       <Banner />
-      <div className="p-4 space-y-8">
-        <Menubar />
-        <ListRecommendedInfluencer />
-      </div>
+      <Menubar />
+      <ListRecommendedInfluencer />
       <Help />
-      <div className="p-4 space-y-8">
-        <ListOtherInfluencer />
-      </div>{" "}
+      <ListOtherInfluencer />
       <Clients />
       <CustomerFeedbackList />
       <Footer />

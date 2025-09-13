@@ -17,7 +17,7 @@ import CardInfluencer from "./card-influencer";
 
 const ListOtherInfluencer = () => {
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 p-4 ">
       <Title title="Other Influencer" />
       <div className="grid grid-cols-2 gap-3">
         {DATA_OTHER_INFLUENCER.map((val, i) => {

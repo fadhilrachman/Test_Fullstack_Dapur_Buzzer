@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 
 const Menubar = () => {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full p-4">
       <nav
         className="w-full md:-bottom-20 gap-x-2 flex overflow-x-scroll scrollbar-hide"
         aria-label="Category shortcuts"
