@@ -22,7 +22,7 @@ export async function GET(req: NextRequest) {
     const responseAPISprint = await axios.get(
       "https://sprintpedia.id/page/instagram_tools",
       {
-        params: { username: "padil" },
+        params: { username: username },
         headers: {
           Accept: "application/json, text/plain, */*",
           "X-Requested-With": "XMLHttpRequest",
@@ -30,7 +30,6 @@ export async function GET(req: NextRequest) {
 
           Cookie: process.env.SPRINT_PEDIA_COOKIE,
         },
-        timeout: 15000,
       }
     );
 
