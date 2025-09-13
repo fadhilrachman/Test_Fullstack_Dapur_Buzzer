@@ -6,3 +6,10 @@ export const MENU_BAR = [
   { label: "DJ & Penyanyi", icon: "fluent-color:mic-28" },
   { label: "Show All", icon: "dashicons:games" },
 ];
+
+export const BOTTOM_BAR = [
+  { label: "Home", icon: "solar:home-2-bold" },
+  { label: "Recommended", icon: "streamline-plump:flash-1-solid" },
+  { label: "Search", icon: "lucide:search" },
+  { label: "About Us", icon: "mdi:about" },
+];
