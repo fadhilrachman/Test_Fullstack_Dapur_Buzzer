@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { DATA_FEEDBACK } from "@/constants/data";
 
-const CustomerFeedbackList = () => {
+const ListCustomerFeedback = () => {
   const renderStars = (rating: number) => {
     return Array(5)
       .fill(0)
@@ -72,4 +72,4 @@ const CustomerFeedbackList = () => {
     </div>
   );
 };
-export default CustomerFeedbackList;
+export default ListCustomerFeedback;

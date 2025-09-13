@@ -317,3 +317,30 @@ export const DATA_CLIENTS = [
     img: "https://app.dapurbuzzer.co.id/images/klien/klien-03.png",
   },
 ];
+
+export const DATA_PACKAGE = [
+  {
+    id: "package1",
+    title: "Paket Endorsement 10 Micro Influencer",
+    image: "https://dapurbuzzer.co.id/images/package/package1.jpg",
+    detailUrl: "https://app.dapurbuzzer.co.id/package/#package1",
+    price: 2500000,
+    priceText: "Rp.2.500.000",
+  },
+  {
+    id: "package2",
+    title: "Paket Paid Promote 10 Micro Influencer",
+    image: "https://dapurbuzzer.co.id/images/package/package2.jpg",
+    detailUrl: "https://app.dapurbuzzer.co.id/package/#package2",
+    price: 1500000,
+    priceText: "Rp.1.500.000",
+  },
+  {
+    id: "package3",
+    title: "Paket Produk Review 10 Micro Influencer",
+    image: "https://dapurbuzzer.co.id/images/package/package3.jpg",
+    detailUrl: "https://app.dapurbuzzer.co.id/package/#package3",
+    price: 2000000,
+    priceText: "Rp.2.000.000",
+  },
+];

@@ -9,12 +9,14 @@ const Navbar = () => {
       <Input
         placeholder="Card Influencer"
         className=" "
+        variant="flat"
         // size="sm"
         startContent={<Icon icon={"lucide:search"} />}
       />
       <Button
         isIconOnly
-        startContent={<Icon icon={"hugeicons:menu-11"} />}
+        variant="flat"
+        startContent={<Icon icon={"hugeicons:menu-11"} className="text-lg" />}
       ></Button>
     </div>
   );

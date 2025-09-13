@@ -63,7 +63,7 @@ const CardInfluencer = (props: Props) => {
           radius="full"
           className="w-full mt-2 h-[28px] "
           color="primary"
-          endContent={<Icon icon={"famicons:call"} />}
+          // endContent={<Icon icon={"famicons:call"} />}
         >
           Book Now
         </Button>

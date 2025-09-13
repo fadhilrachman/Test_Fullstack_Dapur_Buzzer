@@ -2,9 +2,9 @@ import { DATA_CLIENTS } from "@/constants/data";
 import React from "react";
 import Marquee from "react-fast-marquee";
 import Title from "./title";
-const Clients = () => {
+const ListClient = () => {
   return (
-    <div className="space-y-4 bg-primary-200 py-6">
+    <section className="space-y-4 bg-primary-200 py-6">
       <Title title=" Klien Kami" className="px-6" />
 
       <Marquee>
@@ -19,8 +19,8 @@ const Clients = () => {
           );
         })}
       </Marquee>
-    </div>
+    </section>
   );
 };
 
-export default Clients;
+export default ListClient;

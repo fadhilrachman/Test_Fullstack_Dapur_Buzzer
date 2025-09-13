@@ -5,11 +5,12 @@ import Menubar from "@/components/menubar";
 import ListRecommendedInfluencer from "@/components/list-recommended-influencer";
 import Help from "@/components/help";
 import ListOtherInfluencer from "@/components/list-other-influencer";
-import Clients from "@/components/clients";
-import CustomerFeedbackList from "@/components/customer-feedback";
 import BottomBar from "@/components/bottom-bar";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
+import ListClient from "@/components/list-client";
+import ListCustomerFeedback from "@/components/list-customer-feedback";
+import ListDataPackage from "@/components/list-data-package";
 
 export default function Home() {
   return (
@@ -20,8 +21,9 @@ export default function Home() {
       <ListRecommendedInfluencer />
       <Help />
       <ListOtherInfluencer />
-      <Clients />
-      <CustomerFeedbackList />
+      <ListDataPackage />
+      <ListClient />
+      <ListCustomerFeedback />
       <Footer />
       <BottomBar />
       <div className="relative bg-gradient-to-b from-primary-700 via-primary-400 to-transparent"></div>
