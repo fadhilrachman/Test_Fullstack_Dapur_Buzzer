@@ -1,9 +1,14 @@
+"use client";
 import React from "react";
 import { DATA_RECOMMENDED_INFLUENCER } from "@/constants/data";
 import Title from "./title";
 import CardInfluencer from "./card-influencer";
 import { Button } from "@heroui/button";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Scrollbar, Mousewheel } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/scrollbar";
 
 const ListRecommendedInfluencer = () => {
   return (
@@ -24,19 +29,26 @@ const ListRecommendedInfluencer = () => {
         }
       />
 
-      <div className="grid grid-cols-2 gap-3">
-        {DATA_RECOMMENDED_INFLUENCER.slice(0, 2).map((val, i) => {
-          return (
+      <Swiper
+        slidesPerView={"auto"}
+        spaceBetween={12}
+        freeMode={{ enabled: true, momentum: false }}
+        mousewheel={{ forceToAxis: true, releaseOnEdges: true, sensitivity: 0.8 }}
+        scrollbar={{ draggable: true, hide: false, enabled: true, dragSize: 80 }}
+        modules={[FreeMode, Scrollbar, Mousewheel]}
+        className="recommended-swiper pr-4 -mr-4 pb-2"
+      >
+        {DATA_RECOMMENDED_INFLUENCER.map((val, i) => (
+          <SwiperSlide key={i} className="!w-[220px] pb-5">
             <CardInfluencer
-              key={i}
               image={val.avatarUrl}
               name={val.name}
               instagram={val.instagram.handle}
               instagramFollower={val.followers}
             />
-          );
-        })}
-      </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   );
 };

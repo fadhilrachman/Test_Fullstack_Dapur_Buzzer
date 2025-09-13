@@ -52,3 +52,34 @@
   border-radius: 12px;
   transition: all;
 }
+
+.recommended-swiper .swiper-scrollbar {
+  height: 6px;
+  background: transparent;
+  margin-top: 8px;
+}
+.recommended-swiper .swiper-scrollbar-drag {
+  background: #d1d5db;
+  border-radius: 9999px;
+}
+.recommended-swiper:hover .swiper-scrollbar-drag {
+  background: #9ca3af;
+}
+
+.h-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db transparent;
+}
+.h-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+.h-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.h-scroll::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 9999px;
+}
+.h-scroll:hover::-webkit-scrollbar-thumb {
+  background-color: #9ca3af;
+}

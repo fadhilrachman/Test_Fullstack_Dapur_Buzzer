@@ -4,7 +4,7 @@ export const MENU_BAR = [
   { label: "Content Creator", icon: "fluent-color:camera-20" },
   { label: "Gaming", icon: "streamline-color:cloud-gaming-1-flat" },
   { label: "DJ & Penyanyi", icon: "fluent-color:mic-28" },
-  { label: "Show All", icon: "dashicons:games" },
+  { label: "Show All", icon: "gg:menu-grid-o" },
 ];
 
 export const BOTTOM_BAR = [
