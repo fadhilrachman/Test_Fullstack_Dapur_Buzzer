@@ -8,16 +8,18 @@ import { Button } from "@heroui/button";
 import { Image } from "@heroui/image";
 import { Card, CardBody, CardFooter } from "@heroui/card";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { DATA_RECOMMENDED_INFLUENCER } from "@/constants/data";
+import {
+  DATA_OTHER_INFLUENCER,
+  DATA_RECOMMENDED_INFLUENCER,
+} from "@/constants/data";
 import Title from "./title";
 
-const ListRecommendedInfluencer = () => {
+const ListOtherInfluencer = () => {
   return (
-    <div className="space-y-3">
-      <Title title=" Recommended Influencer" />
-
+    <div className="space-y-4">
+      <Title title="Other Influencer" />
       <div className="grid grid-cols-2 gap-3">
-        {DATA_RECOMMENDED_INFLUENCER.slice(0, 2).map((val, i) => {
+        {DATA_OTHER_INFLUENCER.map((val, i) => {
           return (
             <Card
               key={i}
@@ -49,7 +51,7 @@ const ListRecommendedInfluencer = () => {
                         className="text-sm"
                         icon={"ant-design:instagram-filled"}
                       />
-                      <span className="">{val.instagram.handle}</span>
+                      <span className="">{val.instagram.username}</span>
                     </div>
                     <div className="flex items-center gap-1">
                       <Icon
@@ -75,8 +77,13 @@ const ListRecommendedInfluencer = () => {
           );
         })}
       </div>
+      <div className="flex justify-center">
+        <Button variant="flat" size="sm" color="primary">
+          Lihat Semua Influencer
+        </Button>
+      </div>
     </div>
   );
 };
 
-export default ListRecommendedInfluencer;
+export default ListOtherInfluencer;
