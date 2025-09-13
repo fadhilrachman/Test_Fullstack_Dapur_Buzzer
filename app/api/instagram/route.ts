@@ -7,7 +7,7 @@ export async function GET(req: NextRequest) {
   const username = searchParams.get("username");
   const apiKey = process.env.API_KEY;
 
-  if (!clientApiKey && clientApiKey != apiKey && !username) {
+  if (!clientApiKey || clientApiKey != apiKey || !username) {
     return Response.json(
       {
         status: 403,
@@ -18,6 +18,7 @@ export async function GET(req: NextRequest) {
       }
     );
   }
+
   try {
     const responseAPISprint = await axios.get(
       "https://sprintpedia.id/page/instagram_tools",

@@ -1,53 +1,52 @@
-# Next.js & HeroUI Template
+## Test Fullstack Dapur Buzzer - Fadhil Rahman
 
-This is a template for creating applications using Next.js 14 (app directory) and HeroUI (v2).
+Repository ini digunakan untuk pengajuan pekerjaan (job application). Aplikasi menggunakan Next.js (App Router), Tailwind, dan HeroUI. Di bawah ini panduan instalasi, pengisian env, serta detail Submission 1 (endpoint + cara mengujinya).
 
-[Try it on CodeSandbox](https://githubbox.com/heroui-inc/heroui/next-app-template)
+### Instalasi
 
-## Technologies Used
-
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [HeroUI v2](https://heroui.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
-
-## How to Use
-
-### Use the template with create-next-app
-
-To create a new project based on this template using `create-next-app`, run the following command:
-
-```bash
-npx create-next-app -e https://github.com/heroui-inc/next-app-template
-```
-
-### Install dependencies
-
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
+1. Install dependency
 
 ```bash
 npm install
 ```
 
-### Run the development server
+2. Buat file `.env` di root (sudah di-`.gitignore`) dan isi variabel berikut
+
+```env
+API_KEY = APIKEY123  // API key static tidak bisa diubah
+
+SPRINT_PEDIA_COOKIE="<paste-your-sprintpedia-cookie-here>" // Isi dengan cookie yang anda miliki
+```
+
+3. Jalankan mode development
 
 ```bash
 npm run dev
 ```
 
-### Setup pnpm (optional)
+Aplikasi berjalan di `http://localhost:3000`.
 
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
+---
+
+## Submission 1
+
+- URL Endpoint: `GET /api/instagram`
+- Lokasi Kode: `app/api/instagram/route.ts:1`
+- Query params yang dibutuhkan:
+  - `username` : username Instagram yang ingin dicek
+  - `key` : harus sama dengan `API_KEY` pada `.env`
+
+### Contoh Request
 
 ```bash
-public-hoist-pattern[]=*@heroui/*
+curl "http://localhost:3000/api/instagram?username=uhuy&key=your-api-key-here"
 ```
 
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
+### Environment yang diperlukan
 
-## License
+- `API_KEY` — validasi akses endpoint internal
+- `SPRINT_PEDIA_COOKIE` — cookie sesi untuk meneruskan request ke SprintPedia
 
-Licensed under the [MIT license](https://github.com/heroui-inc/next-app-template/blob/main/LICENSE).
+Jika `SPRINT_PEDIA_COOKIE` tidak valid atau kadaluarsa, response dari upstream akan crash. Perbarui cookie dan coba ulang.
+
+---
