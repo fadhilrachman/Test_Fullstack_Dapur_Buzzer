@@ -39,7 +39,7 @@ const ListRecommendedInfluencer = () => {
           momentumVelocityRatio: 0.3,
           minimumVelocity: 0.05,
         }}
-        touchRatio={1.3}
+        touchRatio={6}
         resistanceRatio={0.2}
         mousewheel={{
           forceToAxis: true,
