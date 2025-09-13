@@ -7,7 +7,7 @@ export async function GET(req: NextRequest) {
   const username = searchParams.get("username");
   const apiKey = process.env.API_KEY;
 
-  if (!apiKey && clientApiKey != apiKey && !username) {
+  if (!clientApiKey && clientApiKey != apiKey && !username) {
     return Response.json(
       {
         status: 403,
