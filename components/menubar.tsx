@@ -16,7 +16,7 @@ const Menubar = () => {
         mousewheel={{
           forceToAxis: true,
           releaseOnEdges: true,
-          sensitivity: 0.9,
+          sensitivity: 2,
         }}
         modules={[FreeMode, Mousewheel]}
         className="menubar-swiper"

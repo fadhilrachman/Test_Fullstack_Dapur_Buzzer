@@ -32,9 +32,26 @@ const ListRecommendedInfluencer = () => {
       <Swiper
         slidesPerView={"auto"}
         spaceBetween={12}
-        freeMode={{ enabled: true, momentum: false }}
-        mousewheel={{ forceToAxis: true, releaseOnEdges: true, sensitivity: 0.8 }}
-        scrollbar={{ draggable: true, hide: false, enabled: true, dragSize: 80 }}
+        freeMode={{
+          enabled: true,
+          momentum: true,
+          momentumRatio: 0.25,
+          momentumVelocityRatio: 0.3,
+          minimumVelocity: 0.05,
+        }}
+        touchRatio={1.3}
+        resistanceRatio={0.2}
+        mousewheel={{
+          forceToAxis: true,
+          releaseOnEdges: true,
+          sensitivity: 0.9,
+        }}
+        scrollbar={{
+          draggable: true,
+          hide: false,
+          enabled: true,
+          dragSize: 90,
+        }}
         modules={[FreeMode, Scrollbar, Mousewheel]}
         className="recommended-swiper pr-4 -mr-4 pb-2"
       >
