@@ -1,44 +1,50 @@
 "use client";
 
-import NextImage, { ImageProps as NextImageProps } from "next/image";
-
 import clsx from "clsx";
 import { useState } from "react";
 
 type ImageProps = {
-  rounded?: string;
   src: string;
-} & NextImageProps;
+  alt?: string;
+  rounded?: string; // applied to the outer wrapper
+  className?: string; // applied to the <img>
+  containerClassName?: string; // classes for the wrapper (e.g., aspect-[4/5])
+};
 
 const Image = (props: ImageProps) => {
-  const { alt, src, className, rounded, ...rest } = props;
-  const [isLoading, setLoading] = useState(true);
+  const {
+    alt = "",
+    src,
+    className,
+    rounded,
+    containerClassName,
+    ...rest
+  } = props as any;
 
-  console.log({ isLoading });
+  const [isLoading, setLoading] = useState(true);
 
   return (
     <div
       className={clsx(
         "overflow-hidden",
         isLoading ? "animate-pulse" : "",
-        rounded
+        rounded,
+        containerClassName
       )}
     >
       <img
         data-testid="image"
         className={clsx(
-          "duration-700 ease-in-out w-full max-h-[220px]",
+          // Defaults: avoid fixed height to prevent distortion
+          "block w-full h-auto duration-700 ease-in-out",
           isLoading
             ? "scale-[1.02] blur-xl grayscale"
             : "scale-100 blur-0 grayscale-0",
-          rounded,
           className
         )}
         src={src}
+        alt={alt}
         loading="lazy"
-        width={100}
-        height={300}
-        quality={100}
         onLoad={() => setLoading(false)}
         {...rest}
       />

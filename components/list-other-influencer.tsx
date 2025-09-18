@@ -5,7 +5,6 @@ import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import { Button } from "@heroui/button";
-import { Image } from "@heroui/image";
 import { Card, CardBody, CardFooter } from "@heroui/card";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import {

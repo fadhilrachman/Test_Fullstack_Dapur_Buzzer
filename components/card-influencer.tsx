@@ -24,13 +24,13 @@ const CardInfluencer = (props: Props) => {
     <Card
       radius="lg"
       // isPressable
-      className="relative  cursor-pointer rounded-[28px] flex flex-col  bg-white border border-black/5 shadow-[0_10px_40px_rgba(0,0,0,0.08)] "
+      className="relative !w  cursor-pointer rounded-[28px] flex flex-col  bg-white border border-black/5 shadow-[0_10px_40px_rgba(0,0,0,0.08)] "
     >
       <Image
         alt="Profile"
         src={props.image}
         // src="https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?q=80&w=1470&auto=format&fit=crop"
-        className="h-full"
+        className="h-[220px]"
       />
       <div className=" p-[12px]  sm:p-4 bg-gradient-to-t from-white via-white/30 to-transparent">
         <div className="flex items-center justify-start gap-2">
